@@ -7,8 +7,20 @@ public class Calculator {
         return x + y;
     }
 
+    public static int minus(int y) {
+        return y - x;
+    }
+
     public int multiply(int a) {
         return x * a;
+    }
+
+    public int divide(int y) {
+        return y / x;
+    }
+
+    public int sumAllOperation(int y) {
+        return sum(y) + this.multiply(y) + minus(y) + this.divide(y);
     }
 
     public static void main(String[] args) {
@@ -17,5 +29,11 @@ public class Calculator {
         Calculator calculator = new Calculator();
         int rsl = calculator.multiply(5);
         System.out.println(rsl);
+        int rsl1 = Calculator.minus(3);
+        System.out.println(rsl1);
+        int rsl2 = calculator.divide(4);
+        System.out.println(rsl2);
+        int sumAll = calculator.sumAllOperation(10);
+        System.out.println(sumAll);
     }
 }
